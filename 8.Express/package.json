@@ -1,0 +1,15 @@
+{
+  "name": "expressinstaller",
+  "version": "1.0.0",
+  "description": "package to express installation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shailesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "shailesh",
+  "version": "1.0.0",
+  "description": "My new package",
+  "main": "7.npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mypack"
+  ],
+  "author": "Shailesh",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.5.2",
+    "express": "^4.17.1",
+    "slugify": "^1.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
