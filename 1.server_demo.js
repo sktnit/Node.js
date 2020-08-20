@@ -2,17 +2,17 @@
 // repl->read evaluate print loop
 // .help or double tab in node shell will open list of available variables or modules in nodejs
 // console.log("Hello world");
-const http = require('http');
+const http = require("http");
 
-const hostname = '127.0.0.1';
+const hostname = "127.0.0.1";
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    // res.setHeader('Content-Type', 'text/plain');
-    res.setHeader('Content-Type', 'text/html');
-    //   res.end('Hello World');
-    res.end(`<!DOCTYPE html>
+  res.statusCode = 200;
+  // res.setHeader('Content-Type', 'text/plain');
+  res.setHeader("Content-Type", "text/html");
+  //   res.end('Hello World');
+  res.end(`<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -67,9 +67,8 @@ const server = http.createServer((req, res) => {
         </div>
     </body>
     </html>`);
-
 });
 
 server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(`Server running at http://${hostname}:${port}/`);
 });

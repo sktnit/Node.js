@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  background: black;
+}
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#navbar ul li {
+  list-style: none;
+  text-decoration: none;
+  padding: 13px 14px;
+  /* margin: 3px 10px; */
+}
+
+a {
+  text-decoration: none;
+  font-family: consolas;
+  font-size: 20px;
+  /* font-weight: bold; */
+  color: white;
+}
+
+#navbar ul li a:hover {
+  color: royalblue;
+}
+
+#intro {
+  display: flex;
+  color: rgb(27, 19, 3);
+  justify-content: center;
+  align-items: center;
+  font-family: Consolas;
+  font-size: 35px;
+  font-weight: bold;
+  background: center url("../public/College.jpg");
+  height: 500px;
+  background-color: rgba(148, 109, 127, 0.651);
+}
+
+#intro div {
+  background-color: rgba(248, 248, 248, 0.4);
+}
+
+#quicklink {
+  height: 500px;
+  background-color: rgba(148, 109, 127, 0.651);
+}
+
+#quicklink h3 {
+  text-align: center;
+  padding-top: 12px;
+}
+
+#headbar {
+  background: aqua;
+  text-align: center;
+  /* color: aliceblue; */
+  padding: 8px 14px;
+  font-size: 30px;
+}
+
+#footer {
+  /* display: flex; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}

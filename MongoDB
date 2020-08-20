@@ -1,0 +1,49 @@
+MongoDB stores data as documents, so it is known as document oriented database.
+
+Data is stored as BSON
+
+Database = Database
+Tables = Collections
+Rows = Documents
+
+mongod is the host process for the database.
+mongo is the command line shell that connects to a specific instance of mongod.
+
+show dbs //show all the database
+
+use db //use database db
+
+// Inserting data in mongo db
+db.items.insertOne({name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98})
+
+// Inserting more than one documents
+db.items.insertMany([{name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98}, {name: "Moto 30s", price: 29000, rating: 3.5, qty: 133, sold: 598}, {name: "Realme 80s", price: 129000, rating: 2.5, qty: 633, sold: 98, isBig: true}])
+
+//display documents
+db.items.find()
+
+//display filter documents
+db.items.find({rating: 4.5})
+
+db.items.find({rating: {$gte:3.5}})
+
+//and operation
+db.items.find({rating:{$lt:3.5}, price:{$gte:4000}})
+
+//or operation
+db.items.find({$or:[{rating:{$lt:3.5}}, {price:{$gt:4000}}]})
+
+//display filter documents wt specific attributes
+db.items.find({rating: 4.5}, {rating: 1, qty: 1})
+
+//delete one item if multi doc exists first will be deleted
+db.items.deleteOne({price:22000})
+
+//delete more than one
+db.items.deleteMany({price:22000})
+
+//update one item
+db.items.updateOne({name:'Moto 30s'},{$set:{price:30000}})
+
+//update many items
+db.items.updateMany({name:'Moto 30s'},{$set:{price:30000, rating:1}})
